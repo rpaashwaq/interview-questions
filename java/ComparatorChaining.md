@@ -1,5 +1,7 @@
-Explain about Comparator chaining?
 
+```markdown
+Explain about Comparator chaining?
+```
 **Comparator chaining** in Java refers to the process of combining multiple `Comparator` objects to perform **multi-level sorting** of a collection. This is useful when sorting by one criterion isn’t enough, and you need to add secondary (or tertiary, etc.) sorting criteria in case two elements are considered equal based on the first criterion.
 
 Java 8 introduced convenient methods for `Comparator` chaining, particularly the `thenComparing()` method, which allows you to chain multiple comparators together.
