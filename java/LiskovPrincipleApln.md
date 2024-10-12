@@ -1,4 +1,6 @@
+```markdown
 Explain a scenario where you have used Liskov substitution principle in your application?
+```
 
 A practical scenario where I applied the **Liskov Substitution Principle (LSP)** involved designing a system that processed different types of bank accounts: savings accounts and fixed deposit accounts. Both types of accounts inherited from a base class, but at one point, the design violated LSP, and we had to refactor the code.
 
