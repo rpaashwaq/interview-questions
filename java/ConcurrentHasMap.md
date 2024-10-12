@@ -32,8 +32,7 @@ ConcurrentHashMap Internal Structure and Operations
 
 **Diagram:**
 https://www.javamadesoeasy.com/2015/04/concurrenthashmap-in-java.html
-https://lh5.googleusercontent.com/RHzhZ1BT26RvvSgS9Dqx_N1-tPEqhEDwfTpQnvh1RistQvOYUK5RohHpsx0VBDKV3oPsyS4tdPulhbNF-lwrYzQDp4PXVjeTKuXjYhFPoJdK3sWcrrz-nfniscv3WRTv2bvlDZ4
-
+![Image Description](https://lh5.googleusercontent.com/RHzhZ1BT26RvvSgS9Dqx_N1-tPEqhEDwfTpQnvh1RistQvOYUK5RohHpsx0VBDKV3oPsyS4tdPulhbNF-lwrYzQDp4PXVjeTKuXjYhFPoJdK3sWcrrz-nfniscv3WRTv2bvlDZ4)
 [Image of a ConcurrentHashMap internal structure diagram, showing segments, striped locks, and key-value pairs]
 
 **Operations:**
