@@ -1,7 +1,10 @@
+
+```markdown
 Count characters
 
 String s = "aaabbccfddccb";
 a-3,b-2,c-2,f-1,d-2,c-2,b
+```
 
 import java.util.HashMap;
 import java.util.Map;
