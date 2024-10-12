@@ -1,7 +1,7 @@
 input=[1,1,2,2,3,3,4,4,8,8] By iterating only once, find the non duplicate number in java 8
 
 ```markdown
-`<pre>``<code>`
+
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -31,7 +31,7 @@ int nonDuplicate = findNonDuplicate(input);
 
 
 }
-`</pre>``</code>`
+```markdown
 
 Explanation:
 
