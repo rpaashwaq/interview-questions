@@ -2,6 +2,11 @@ How to handle Immutable class with mutable references.(Date)
 
 Handling Immutable Classes with Mutable References:
 
+1. Don't provide setter methods.
+2. Mark all fields final and private.
+3. Don't allow subclasses to override methods.
+4. Special attention to mutable instances.
+
  The Case of Date Understanding the Problem:
 
 When dealing with immutable classes like Date in Java, it's essential to be aware of the potential pitfalls that arise from mutable references.
