@@ -17,3 +17,62 @@ Difference between ConcurrentHashMap vs HashMap
 * **HashMap** is simpler and more efficient in single-threaded or read-only scenarios but can suffer from performance degradation in concurrent environments.
 
 The choice between ConcurrentHashMap and HashMap depends on the specific requirements of your application, particularly the level of concurrency and the need for thread safety.
+
+-----
+
+ConcurrentHashMap Internal Structure and Operations
+
+## ConcurrentHashMap Internal Structure and Operations
+
+**Key Concepts:**
+
+* **Segmentation:** The map is divided into multiple segments, each of which is independently lockable. This allows for concurrent access to different parts of the map.
+* **Striped Lock:** Each segment uses a striped lock, which is a lock array. The index of the lock to use for a given key is determined by a hashing function. This reduces contention compared to a single lock for the entire map.
+* **Rehashing:** As the map grows, it may need to be rehashed to maintain performance. This involves creating a new table and transferring entries from the old table. Rehashing is done concurrently to minimize performance impact.
+
+**Diagram:**
+
+[Image of a ConcurrentHashMap internal structure diagram, showing segments, striped locks, and key-value pairs]
+
+**Operations:**
+
+1. **Get:**
+   * Calculate the hash code of the key.
+   * Determine the segment index based on the hash code.
+   * Acquire the lock for the segment.
+   * Search for the key in the segment's table.
+   * Release the lock.
+   * Return the value if found, or null if not found.
+
+2. **Put:**
+   * Calculate the hash code of the key.
+   * Determine the segment index based on the hash code.
+   * Acquire the lock for the segment.
+   * Search for the key in the segment's table.
+   * If the key is found, update the value.
+   * If the key is not found, insert the key-value pair into the segment's table.
+   * If the segment's table is full, trigger a rehash operation.
+   * Release the lock.
+
+3. **Remove:**
+   * Calculate the hash code of the key.
+   * Determine the segment index based on the hash code.
+   * Acquire the lock for the segment.
+   * Search for the key in the segment's table.
+   * If the key is found, remove the key-value pair.
+   * Release the lock.
+
+**Advantages of ConcurrentHashMap:**
+
+* **High concurrency:** Multiple threads can access and modify different parts of the map concurrently.
+* **Low contention:** Striped locks reduce contention compared to a single lock, improving performance.
+* **Scalability:** The map can scale to handle large datasets and high concurrency.
+
+**Key considerations:**
+
+* **Rehashing overhead:** Rehashing can be expensive, especially for large maps.
+* **Complexity:** The internal structure and algorithms of ConcurrentHashMap are more complex than HashMap.
+
+**In summary:**
+
+ConcurrentHashMap is a powerful and efficient data structure for concurrent applications. Its internal structure and operations are designed to provide high concurrency, low contention, and scalability.
