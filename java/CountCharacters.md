@@ -6,6 +6,7 @@ String s = "aaabbccfddccb";
 a-3,b-2,c-2,f-1,d-2,c-2,b
 ```
 
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,16 +29,20 @@ Map<Character, Integer> charCountMap = new HashMap<>();
     }
 
 }
+```
 
 This code first creates a HashMap to store character counts. It then iterates through each character in the input string and updates the count in the map. Finally, it prints the character counts in the desired format.
 
 ---
-
+```markdown
 Count characters in java8
 
 String s = "aaabbccfddccb";
 a-3,b-2,c-2,f-1,d-2,c-2,b
+```
 
+
+```java
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -54,6 +59,7 @@ String s = "aaabbccfddccb";
     }
 
 }
+```
 
 Explanation:
 
