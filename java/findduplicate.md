@@ -31,7 +31,7 @@ int nonDuplicate = findNonDuplicate(input);
 
 
 }
-```markdown
+```
 
 Explanation:
 
