@@ -6,17 +6,27 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class NonDuplicateFinder {
+
 public static int findNonDuplicate(int[] input) {
+
 return IntStream.of(input)
+
 .boxed()
+
 .reduce((a, b) -> a ^ b)
+
 .orElse(0);
+
 }
 
 public static void main(String[] args) {
-        int[] input = {1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 5}; // Added 5 as a non-duplicate number
-        int nonDuplicate = findNonDuplicate(input);
+        
+int[] input = {1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 5}; // Added 5 as a non-duplicate number
+        
+int nonDuplicate = findNonDuplicate(input);
+
         System.out.println("Non-duplicate number: " + nonDuplicate);
+
     }
 
 
