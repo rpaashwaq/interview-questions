@@ -1,5 +1,7 @@
 input=[1,1,2,2,3,3,4,4,8,8] By iterating only once, find the non duplicate number in java 8
 
+
+    
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -11,11 +13,12 @@ return IntStream.of(input)
 .orElse(0);
 }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
         int[] input = {1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 5}; // Added 5 as a non-duplicate number
         int nonDuplicate = findNonDuplicate(input);
         System.out.println("Non-duplicate number: " + nonDuplicate);
     }
+
 
 }
 
