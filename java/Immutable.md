@@ -1,6 +1,6 @@
 ```markdown
 How to handle Immutable class with mutable references.(Date)
-``|
+```
 
 Handling Immutable Classes with Mutable References:
 
