@@ -19,6 +19,31 @@ what are functional interfaces of java 8?
 3. Consumer
 4. Supplier
 
+Can you write one functional interface ?
+
+   ```java
+   import java.text.SimpleDateFormat;
+   import java.util.Date;
+   import java.util.Random;
+
+   @FunctionalInterface
+   public interface UPIPayment {
+      String doPayment(String source, String destination); // By default interface methods are public and abstract. FI have only one abstract method.
+
+       default double getScratchCard(){
+          return new Random().nextDouble();
+       }
+
+       static String datePatterns(String patterns){
+          SimpleDateFormat sdf = new SimpleDateFormat(patterns);
+          return sdf.format(new Date()); 
+       }
+   }
+   ```
+
+Can we extend functional interface from another functional interface ?
+  Yes we can extend, but it will not be functional interface after extending with another FI.
+   
 what is Lambda expression?
 
 it express instances of functional interfaces, 
