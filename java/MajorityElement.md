@@ -70,6 +70,7 @@ In the example you gave, there are 3 friends and their favorite movies are:
 * Friend 2: Movie B
 * Friend 3: Movie A
 
-If we count the votes, we see that Movie A has 2 votes and Movie B has 1 vote. Therefore, Movie A is the majority movie because it has more than half the votes.
+If we count the votes, we see that Movie A has 2 votes and Movie B has 1 vote.
+Therefore, Movie A is the majority movie because it has more than half the votes.
 
 ```
