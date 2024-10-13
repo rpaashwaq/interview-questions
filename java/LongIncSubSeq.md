@@ -1,5 +1,6 @@
+```markdown
 Finding the Longest Increasing Subsequence (LIS)
-
+```
 Understanding the Problem:
  * We're given an array of integers.
  * We need to find the longest subsequence of elements that are strictly increasing.
@@ -16,6 +17,7 @@ Algorithm:
  * Find Maximum: After iterating through the entire array, the maximum value in the dp array will be the length of the longest increasing subsequence.
 
 Code Implementation (Python):
+```pyrhon
 def longest_increasing_subsequence(A):
     n = len(A)
     dp = [1] * n  # Initialize DP array with 1s
@@ -26,8 +28,10 @@ def longest_increasing_subsequence(A):
                 dp[i] = max(dp[i], dp[j] + 1)
 
     return max(dp)
+```
 
 Code Implementation (Java):
+```java
 
 import java.util.Arrays;
 
@@ -55,7 +59,7 @@ public class LongestIncreasingSubsequence {
     }
 }
 
-
+```
 Time Complexity: O(n^2)
 Space Complexity: O(n)
 
