@@ -1,8 +1,29 @@
+```markdown
 Explain about the design principles
+```
+
+## Design Principles in Software Development
+
+**Table of Contents**
+
+- [SOLID Principles](#solid-principles)
+  - [Single Responsibility Principle (SRP)](#srp)
+  - [Open/Closed Principle (OCP)](#ocp)
+  - [Liskov Substitution Principle (LSP)](#lsp)
+  - [Interface Segregation Principle (ISP)](#isp)
+  - [Dependency Inversion Principle (DIP)](#dip)
+- [DRY Principle (Don't Repeat Yourself)](#dry)
+- [KISS Principle (Keep It Simple, Stupid)](#kiss)
+- [YAGNI (You Aren't Gonna Need It)](#yagni)
+- [Composition Over Inheritance](#composition-over-inheritance)
+- [Law of Demeter (LoD)](#lod)
+- [Favor Composition Over Inheritance](#favor-composition)
+- [Conclusion](#conclusion)
 
 Design principles in software development refer to high-level guidelines that help developers create robust, maintainable, scalable, and reusable systems. Following these principles ensures better software design, which leads to cleaner code, easier debugging, and better handling of future changes.
 
 Here are some key design principles:
+[link](#1-solid-principles)
 
 ### 1. **SOLID Principles**
 
@@ -18,6 +39,8 @@ A class should have **only one reason to change**, meaning it should have only o
 class User { /* Handles user data */ }
 class UserFileManager { /* Handles file operations */ }
 ```
+
+[link](#o---openclosed-principle-ocp)
 
 #### O - **Open/Closed Principle (OCP)**
 
@@ -41,11 +64,15 @@ class Square implements Shape {
 // We can add new shapes without modifying existing ones.
 ```
 
+[link](#l---liskov-substitution-principle-lsp)
+
 #### L - **Liskov Substitution Principle (LSP)**
 
 Subtypes must be substitutable for their base types without altering the correctness of the program. In other words, objects of a derived class should be able to replace objects of the base class without affecting the program's behavior.
 
 **Example**: If `Square` is a subclass of `Rectangle`, it should behave like a `Rectangle` when used in the program, without breaking functionality.
+
+[link](#i---interface-segregation-principle-isp)
 
 #### I - **Interface Segregation Principle (ISP)**
 
@@ -76,6 +103,8 @@ interface Fax {
 ```
 
 This way, a `Printer` class only needs to implement the `Printer` interface, not the other unnecessary methods.
+
+[link](#d---dependency-inversion-principle-dip)
 
 #### D - **Dependency Inversion Principle (DIP)**
 
