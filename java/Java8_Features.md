@@ -13,13 +13,17 @@ It can have any number of default and static methods.
 e.g., Runnable, Callable, Comparator
 
 what are functional interfaces of java 8?
+
 1. Function
 2. Predicate
 3. Consumer
 4. Supplier
 
 what is Lambda expression?
+
 it express instances of functional interfaces, 
-in other words it peovides a clear and concise way 
+in other words it provides a clear and concise way 
 to represent method of a functional using a expression.
+
+
 
