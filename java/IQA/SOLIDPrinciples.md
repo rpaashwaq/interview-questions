@@ -41,9 +41,7 @@ class User { /* Handles user data */ }
 class UserFileManager { /* Handles file operations */ }
 ```
 
-[link](#o---openclosed-principle-ocp)
-
-#### O - **Open/Closed Principle (OCP)**
+[link] #### O - **Open/Closed Principle (OCP)** (#o---openclosed-principle-ocp)
 
 A class should be **open for extension but closed for modification**. This means that you should be able to extend a class's behavior without modifying the original class, usually by using inheritance, interfaces, or composition.
 
