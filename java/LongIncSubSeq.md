@@ -17,7 +17,7 @@ Algorithm:
  * Find Maximum: After iterating through the entire array, the maximum value in the dp array will be the length of the longest increasing subsequence.
 
 Code Implementation (Python):
-```pyrhon
+```python
 def longest_increasing_subsequence(A):
     n = len(A)
     dp = [1] * n  # Initialize DP array with 1s
