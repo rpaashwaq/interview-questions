@@ -47,3 +47,72 @@ Now your tank has 2 units of gas. You need B[1] = 1 gas to get to station 0.
 So, you travel to station 0 and still have 1 unit of gas left over.
 You fill in A[0] = 1 unit of additional gas, making your current gas = 2. It costs you B[0] = 2 to get to station 1, which you do and complete the circuit.
 
+```java
+import java.util.Arrays;
+
+public class GasStation {
+    public static int canCompleteCircuit(int[] gas, int[] cost) {
+        int n = gas.length;
+        int totalGas = 0;
+        int currentGas = 0;
+        int start = 0;
+
+        for (int i = 0; i < n; i++) {
+            totalGas += gas[i] - cost[i];
+            currentGas += gas[i] - cost[i];
+
+            if (currentGas < 0) {
+                start = i + 1;
+                currentGas = 0;
+            }
+        }
+
+        return totalGas >= 0 ? start : -1;
+    }
+
+    public static void main(String[] args) {
+        int[] gas = {1, 2};
+        int[] cost = {2, 1};
+        int result = canCompleteCircuit(gas, cost);
+        System.out.println(result);  // Output: 1
+    }
+}
+```
+
+```python
+def can_complete_circuit(A, B):
+    """
+    Determines the minimum starting gas station index to complete a circuit.
+
+    Args:
+        A: An integer array representing the amount of gas at each station.
+        B: An integer array representing the cost to travel from one station to the next.
+
+    Returns:
+        The minimum starting gas station index, or -1 if it's impossible.
+    """
+
+    n = len(A)
+    total_gas = 0
+    current_gas = 0
+    start_index = 0
+
+    for i in range(n):
+        total_gas += A[i] - B[i]
+        current_gas += A[i] - B[i]
+
+        if current_gas < 0:
+            start_index = i + 1
+            current_gas = 0
+
+    if total_gas >= 0:
+        return start_index
+    else:
+        return -1
+
+# Example usage
+A = [1, 2]
+B = [2, 1]
+result = can_complete_circuit(A, B)
+print(result)  # Output: 1
+```
