@@ -146,17 +146,21 @@ output: {a=3, B=1, s=1, t=1, n=1}
 Stream vs Parallel Stream ?
 ```
 ![image](https://github.com/user-attachments/assets/e35f3746-043f-41d0-9117-d9bae7cf78e9)
-Feature	Stream	ParallelStream
-Execution	Sequential (single thread)	Concurrent (multiple threads)
-Performance	Generally slower for small datasets	Faster for large datasets due to parallelization
-Overhead	Lower overhead	Higher overhead due to thread creation and management
-Determinism	Order of operations is guaranteed	Order of operations may not be guaranteed
-Use Case	Suitable for most scenarios	Ideal for CPU-intensive tasks with large datasets
-Example	List<Integer> numbers = Arrays.asList(1, 2, 3);	List<Integer> numbers = Arrays.asList(1, 2, 3).parallelStream();
-Key Method	stream()	parallelStream()
 
-Export to Sheets
-Note: While ParallelStream can often improve performance for large datasets, it's important to consider factors like task granularity, synchronization overhead, and potential race conditions. Always measure and profile your applications to determine the optimal approach.
+## Stream vs ParallelStream in Java 8
+
+| Feature | Stream | ParallelStream |
+|---|---|---|
+| **Execution** | Sequential (single thread) | Concurrent (multiple threads) |
+| **Performance** | Generally slower for small datasets | Faster for large datasets due to parallelization |
+| **Overhead** | Lower overhead | Higher overhead due to thread creation and management |
+| **Determinism** | Order of operations is guaranteed | Order of operations may not be guaranteed |
+| **Use Case** | Suitable for most scenarios | Ideal for CPU-intensive tasks with large datasets |
+| **Example** | `List<Integer> numbers = Arrays.asList(1, 2, 3);` | `List<Integer> numbers = Arrays.asList(1, 2, 3).parallelStream();` |
+| **Key Method** | `stream()` | `parallelStream()` |
+
+**Note:** While `ParallelStream` can often improve performance for large datasets, it's important to consider factors like task granularity, synchronization overhead, and potential race conditions. Always measure and profile your applications to determine the optimal approach.
+
 
 
 ```markdown
