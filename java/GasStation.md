@@ -49,6 +49,22 @@ So, you travel to station 0 and still have 1 unit of gas left over.
 You fill in A[0] = 1 unit of additional gas, making your current gas = 2.
 It costs you B[0] = 2 to get to station 1, which you do and complete the circuit.
 ```
+```markdown
+Explainataion:
+
+Imagine you're on a road trip with your family. You have a car that needs gas to run.
+There are many gas stations along the way, but you don't know which one to start from to make it all the way around the trip.
+
+Here's a simple way to think about it:
+
+Check the gas: Look at how much gas is in each gas station.
+Calculate the cost: Figure out how much gas it takes to get to the next station.
+Subtract: See if you have enough gas to reach the next station.
+Repeat: Keep checking, calculating, and subtracting for all the stations.
+If you find a gas station where you have enough gas to reach the next station,
+and you can keep going around the trip without running out, then that's the starting point you need!
+
+```
 Code in Java:
 ```java
 import java.util.Arrays;
