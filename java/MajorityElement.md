@@ -104,9 +104,18 @@ public class MajorityElement {
 
 This code uses Java 8 streams and lambda expressions to find the majority element in the array:
 
-Arrays.stream(nums).boxed(): Converts the integer array nums to a stream of Integer objects.
-collect(Collectors.groupingBy(Integer::intValue, Collectors.counting())): Groups the elements in the stream by their integer value and counts the occurrences of each element.
-entrySet().stream().filter(entry -> entry.getValue() > n / 2): Filters the entries in the map to find the entry with a count greater than n / 2.
-findFirst().map(Map.Entry::getKey).orElse(-1): Returns the key of the first entry that satisfies the filter condition, or -1 if no such entry exists.
-This code is more concise and expressive than the previous version, but it may be less efficient for large arrays due to the overhead of creating streams and intermediate collections.
+Arrays.stream(nums).boxed():
+Converts the integer array nums to a stream of Integer objects.
+
+collect(Collectors.groupingBy(Integer::intValue, Collectors.counting())):
+Groups the elements in the stream by their integer value and counts the occurrences of each element.
+
+entrySet().stream().filter(entry -> entry.getValue() > n / 2):
+Filters the entries in the map to find the entry with a count greater than n / 2.
+
+findFirst().map(Map.Entry::getKey).orElse(-1):
+Returns the key of the first entry that satisfies the filter condition, or -1 if no such entry exists.
+
+This code is more concise and expressive than the previous version,
+but it may be less efficient for large arrays due to the overhead of creating streams and intermediate collections.
 ```
