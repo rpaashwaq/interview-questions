@@ -222,6 +222,10 @@ Why CompletableFuture why not Future ?
 3. You can not combine multiple futures together
 4. no exception handling
 
+```markdown
+Write a program to print even or odd numbers using 2 Threads ?
+```
+
 ```java
 package org.java.lambda_expressions;
 
