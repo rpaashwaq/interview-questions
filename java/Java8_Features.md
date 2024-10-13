@@ -144,6 +144,6 @@ output: {a=3, B=1, s=1, t=1, n=1}
 ```markdown
 Stream vs Parallel Stream ?
 ```
-![Image Description](![image](https://github.com/user-attachments/assets/8f432c79-3697-4f44-8608-3c77fd65da38)
+![image](https://github.com/user-attachments/assets/8f432c79-3697-4f44-8608-3c77fd65da38)
 
 
