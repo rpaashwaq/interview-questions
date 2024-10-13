@@ -28,7 +28,9 @@ Can you write one functional interface ?
 
    @FunctionalInterface
    public interface UPIPayment {
-      String doPayment(String source, String destination); // By default interface methods are public and abstract. FI have only one abstract method.
+
+      // By default interface methods are public and abstract. FI have only one abstract method.
+      String doPayment(String source, String destination); 
 
        default double getScratchCard(){
           return new Random().nextDouble();
