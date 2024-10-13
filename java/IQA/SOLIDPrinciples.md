@@ -10,7 +10,8 @@ Here are some key design principles:
 
 **Table of Contents**
 
-## [1. **SOLID Principles**](#solid-principles)
+[## [1. **SOLID Principles**]](#solid-principles)
+
   - [Single Responsibility Principle (SRP)](#srp)
   - [Open/Closed Principle (OCP)](#ocp)
   - [Liskov Substitution Principle (LSP)](#lsp)
@@ -41,7 +42,7 @@ class User { /* Handles user data */ }
 class UserFileManager { /* Handles file operations */ }
 ```
 
-[link] #### O - **Open/Closed Principle (OCP)** (#o---openclosed-principle-ocp)
+[link](#o---openclosed-principle-ocp)
 
 A class should be **open for extension but closed for modification**. This means that you should be able to extend a class's behavior without modifying the original class, usually by using inheritance, interfaces, or composition.
 
