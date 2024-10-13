@@ -24,7 +24,8 @@ Design principles in software development refer to high-level guidelines that he
 
 Here are some key design principles:
 
-[### 1. **SOLID Principles**](#solid-principles)
+## [1. **SOLID Principles**](#solid-principles)
+### 1. **SOLID Principles**
 
 The SOLID principles are a set of five design principles introduced by Robert C. Martin (Uncle Bob) that promote maintainability, flexibility, and extensibility in object-oriented programming.
 
