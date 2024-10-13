@@ -103,6 +103,27 @@ Spell few stream method you used in your project ?
 ```
 filter, forEach, sorted, map, flatMap, reduce, groupingBy, count, collect
 
+e.g.,
+```java
+
+public class User { private String name; private String phone; private List<String> email; }
+
+List<User> users = Stream.of(
+                     new User("user01", "1234567890", Arrays.asList("abc@gmail.com", "def@gmail.com")),
+                     new User("user02", "0987654321", Arrays.asList("pqr@gmail.com", "stu@gmail.com")))
+                .collect(Collectors.toList());     
+
+//Find all phone numbers from users list.
+List<String> phoneNumbers = users.stream()
+                            .map(User::getPhone)
+                            .collect(Collectors.toList()); System.out.println(phoneNumbers);
+
+//Find all email addresses from users list. We need to use flatMap as it is stream of streams.
+List<String> emails = users.stream()
+                      .flatMap(e -> e.getEmail().stream())
+                      .collect(Collectors.toList()); System.out.println(emails);
+```
+                     
 ```markdown
 when to use map & flatMap ?
 ```
