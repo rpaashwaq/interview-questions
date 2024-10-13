@@ -23,9 +23,8 @@ Explain about the design principles
 Design principles in software development refer to high-level guidelines that help developers create robust, maintainable, scalable, and reusable systems. Following these principles ensures better software design, which leads to cleaner code, easier debugging, and better handling of future changes.
 
 Here are some key design principles:
-[link](#1-solid-principles)
 
-### 1. **SOLID Principles**
+[### 1. **SOLID Principles**](url)
 
 The SOLID principles are a set of five design principles introduced by Robert C. Martin (Uncle Bob) that promote maintainability, flexibility, and extensibility in object-oriented programming.
 
