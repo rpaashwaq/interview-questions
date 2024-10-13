@@ -4,10 +4,13 @@ Explain about the design principles
 
 ## Design Principles in Software Development
 
+Design principles in software development refer to high-level guidelines that help developers create robust, maintainable, scalable, and reusable systems. Following these principles ensures better software design, which leads to cleaner code, easier debugging, and better handling of future changes.
+
+Here are some key design principles:
+
 **Table of Contents**
 
 ## [1. **SOLID Principles**](#solid-principles)
-- [SOLID Principles](#solid-principles)
   - [Single Responsibility Principle (SRP)](#srp)
   - [Open/Closed Principle (OCP)](#ocp)
   - [Liskov Substitution Principle (LSP)](#lsp)
@@ -22,9 +25,6 @@ Explain about the design principles
 ## [7. **Favor Composition Over Inheritance**](#favor-composition)
 ## [**Conclusion**](#conclusion)
 
-Design principles in software development refer to high-level guidelines that help developers create robust, maintainable, scalable, and reusable systems. Following these principles ensures better software design, which leads to cleaner code, easier debugging, and better handling of future changes.
-
-Here are some key design principles:
 
 ### 1. **SOLID Principles**
 
