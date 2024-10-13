@@ -53,6 +53,29 @@ public class MajorityElement {
     }
 }
 ```
+
+Explanation:
+
+```markdown
+Imagine you have a group of friends, and you want to choose a movie to watch.
+You ask everyone their favorite movie, and the movie that most people choose is the "majority" movie.
+
+Here's a simple way to find the majority movie:
+
+1. **Count the votes:** Ask each friend their favorite movie and keep track of how many votes each movie gets.
+2. **Find the winner:** The movie with the most votes is the majority movie.
+
+In the example you gave, there are 3 friends and their favorite movies are:
+
+* Friend 1: Movie A
+* Friend 2: Movie B
+* Friend 3: Movie A
+
+If we count the votes, we see that Movie A has 2 votes and Movie B has 1 vote.
+Therefore, Movie A is the majority movie because it has more than half the votes.
+
+```
+
 Code in Java 8 streams:
 ```java
 import java.util.Arrays;
@@ -76,24 +99,14 @@ public class MajorityElement {
     }
 }
 ```
-Explanation:
-
 ```markdown
-Imagine you have a group of friends, and you want to choose a movie to watch.
-You ask everyone their favorite movie, and the movie that most people choose is the "majority" movie.
 
-Here's a simple way to find the majority movie:
 
-1. **Count the votes:** Ask each friend their favorite movie and keep track of how many votes each movie gets.
-2. **Find the winner:** The movie with the most votes is the majority movie.
+This code uses Java 8 streams and lambda expressions to find the majority element in the array:
 
-In the example you gave, there are 3 friends and their favorite movies are:
-
-* Friend 1: Movie A
-* Friend 2: Movie B
-* Friend 3: Movie A
-
-If we count the votes, we see that Movie A has 2 votes and Movie B has 1 vote.
-Therefore, Movie A is the majority movie because it has more than half the votes.
-
+Arrays.stream(nums).boxed(): Converts the integer array nums to a stream of Integer objects.
+collect(Collectors.groupingBy(Integer::intValue, Collectors.counting())): Groups the elements in the stream by their integer value and counts the occurrences of each element.
+entrySet().stream().filter(entry -> entry.getValue() > n / 2): Filters the entries in the map to find the entry with a count greater than n / 2.
+findFirst().map(Map.Entry::getKey).orElse(-1): Returns the key of the first entry that satisfies the filter condition, or -1 if no such entry exists.
+This code is more concise and expressive than the previous version, but it may be less efficient for large arrays due to the overhead of creating streams and intermediate collections.
 ```
