@@ -53,6 +53,29 @@ public class MajorityElement {
     }
 }
 ```
+Code in Java 8 streams:
+```java
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class MajorityElement {
+    public int majorityElement(int[] nums) {
+        int n = nums.length;
+
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(Integer::intValue, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() > n / 2)
+                .findFirst()
+                .map(Map.Entry::getKey)
+                .orElse(-1);
+    }
+}
+```
 Explanation:
 
 ```markdown
