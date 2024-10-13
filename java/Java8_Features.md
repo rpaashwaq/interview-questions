@@ -150,7 +150,8 @@ Stream vs Parallel Stream ?
 
 
 ```markdown
-Assume you have list of employees in various departments. Write a program to find highest paid employee from each department ?
+Assume you have list of employees in various departments.
+Write a program to find highest paid employee from each department ?
 ```
 ```java
 public class Employee { private long id; private String name; private String dept; private double salary; }
