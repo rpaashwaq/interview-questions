@@ -147,6 +147,14 @@ Stream vs Parallel Stream ?
 ```
 ![image](https://github.com/user-attachments/assets/e35f3746-043f-41d0-9117-d9bae7cf78e9)
 
+//Stream uses single core cpu thread .. executes all iterations in main method
+IntStream.rangeClosed(1,10).forEach(e -> System.out.println(Thread.currentThread().getName() + e);
+
+//Parallel Stream utilizes all core cpu threads .. executes all iterations using thread pool workers along with one main thread.
+IntStream.rangeClosed(1,10)
+                .parallel()
+                .forEach(e -> System.out.println(Thread.currentThread().getName() + e);
+
 ## Stream vs ParallelStream in Java 8
 
 | Feature | Stream | ParallelStream |
