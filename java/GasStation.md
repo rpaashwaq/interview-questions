@@ -79,6 +79,33 @@ public class GasStation {
     }
 }
 ```
+
+Code in Java 8:
+```java
+import java.util.List;
+
+public class GasStation {
+    public int canCompleteCircuit(final List<Integer> A, final List<Integer> B) {
+        int n = A.size();
+        int totalGas = 0;
+        int currentGas = 0;
+        int start = 0;
+
+        for (int i = 0; i < n; i++) {
+            totalGas += A.get(i) - B.get(i);
+            currentGas += A.get(i) - B.get(i);
+
+            if (currentGas < 0) {
+                start = i + 1;
+                currentGas = 0;
+            }
+        }
+
+        return totalGas >= 0 ? start : -1;
+    }
+}
+```
+
 Code in Python:
 ```python
 def can_complete_circuit(A, B):
