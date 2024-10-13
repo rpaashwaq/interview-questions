@@ -10,7 +10,7 @@ Here are some key design principles:
 
 **Table of Contents**
 
-## 1. **SOLID Principles**(#solid-principles)
+## [1. **SOLID Principles**](#solid-principles)
 
   - [Single Responsibility Principle (SRP)](#srp)
   - [Open/Closed Principle (OCP)](#ocp)
