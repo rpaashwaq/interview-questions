@@ -13,7 +13,8 @@ Explain about the design principles
   - [Liskov Substitution Principle (LSP)](#lsp)
   - [Interface Segregation Principle (ISP)](#isp)
   - [Dependency Inversion Principle (DIP)](#dip)
-- [DRY Principle (Don't Repeat Yourself)](#dry)
+
+## [2. **DRY Principle (Don't Repeat Yourself)**](#dry)
 - [KISS Principle (Keep It Simple, Stupid)](#kiss)
 - [YAGNI (You Aren't Gonna Need It)](#yagni)
 - [Composition Over Inheritance](#composition-over-inheritance)
