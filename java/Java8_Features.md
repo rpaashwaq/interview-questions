@@ -205,4 +205,19 @@ Map<String, Employee> employeeMap1 = employees.stream().
                                      ));
 
 System.out.println(employeeMap1);
+```
 
+```markdown
+What is CompletableFuture ?
+```
+Used in Asynchronous Programming in Java, meaning writing a non-blocking code by running a task on a seperate thread than 
+the main application thread and notifying the main application thread and notify the main thread about its progress, completion of failure. 
+
+
+```markdown
+Why CompletableFuture why not Future ?
+```
+1. It can not be manually completed
+2. Multiple Futures can not be chained together
+3. You can not combine multiple futures together
+4. no exception handling
