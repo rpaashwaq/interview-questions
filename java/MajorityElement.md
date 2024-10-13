@@ -56,7 +56,8 @@ public class MajorityElement {
 Explanation:
 
 ```markdown
-Imagine you have a group of friends, and you want to choose a movie to watch. You ask everyone their favorite movie, and the movie that most people choose is the "majority" movie.
+Imagine you have a group of friends, and you want to choose a movie to watch.
+You ask everyone their favorite movie, and the movie that most people choose is the "majority" movie.
 
 Here's a simple way to find the majority movie:
 
