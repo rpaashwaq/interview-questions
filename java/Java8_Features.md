@@ -64,5 +64,47 @@ it express instances of functional interfaces,
 in other words it provides a clear and concise way 
 to represent method of a functional using a expression.
 
+ ```markdown
+ What's the advantages and disadvantages of Lambda Expression it?
+ ```
+Advantage:
+1. Avoid writing anonymous implementation
+2. It save a lot of code
+3. The code is directly readable without interpretation
+
+Disadvantage:
+1. Hard to use without IDE
+2. Complex to debug
+
+```markdown
+What is Stream API?
+```
+Stream API introduced in java 8 and it is used to process collections of objects with functional style of coding using lambda expression.
+
+```markdown
+What is Stream in Java 8 ?
+```
+A stream is a sequence of objects that  supports various methods which can be pipelined to produce the desired result.
+Features:
+1. A stream is NOT a data structure instead it takes input from the Collections, Arrays or I/O channels.
+2. Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+
+```markdown
+What is method reference in Java 8 ?
+```
+Method Reference is a shorthand notation of a lambda expression to call a method.
+e.g.,
+List<Integer> numList = Arrays.asList(23,4,6,8,9,1,2,10);
+numList.stream().filter(i -> i>5).sorted().forEach(t -> System.out::println(t));
+output: 6,8,9,10,23
+
+```markdown
+Spell few stream method you used in your project ?
+```
+filter, forEach, sorted, map, flatMap, reduce, groupingBy, count, collect
+
+```markdown
+when to use map & flatMap ?
+```
 
 
