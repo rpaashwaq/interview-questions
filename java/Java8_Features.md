@@ -221,3 +221,44 @@ Why CompletableFuture why not Future ?
 2. Multiple Futures can not be chained together
 3. You can not combine multiple futures together
 4. no exception handling
+
+```java
+package org.java.lambda_expressions;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
+
+public class EvenOddPrinter {
+
+    private static  Object object = new Object();
+    private static IntPredicate evenCondition = number -> number % 2 == 0;
+    private static IntPredicate oddCondition = number -> number % 2 != 0;
+
+    public static void main(String[] args) throws InterruptedException {
+        CompletableFuture.runAsync(() -> printNumber(oddCondition));
+        CompletableFuture.runAsync(() -> printNumber(evenCondition));
+        Thread.sleep(1000);
+        System.out.println("Done printing");
+    }
+
+    public static void printNumber(IntPredicate condition) {
+        IntStream.rangeClosed(1,10)
+                .filter(condition)
+                //.forEach(number -> execute(number));
+                .forEachOrdered(EvenOddPrinter::execute);
+    }
+      public static void execute(int number) {
+          synchronized (object) {
+              try{
+                  System.out.println(Thread.currentThread().getName()+":"+number);
+                  object.notify();
+                  object.wait();
+              }catch (Exception e) {
+                  e.printStackTrace();
+              }
+          }
+      }
+}
+
+```
