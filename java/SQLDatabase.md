@@ -2,8 +2,9 @@
 ```markdown
 Delete va Truncate difference
 ```
-Criteria,Delete,Truncate
-Purpose,Removes specific rows,Removes all rows from a table
+|-----|-----|-----|
+|**Criteria**|**Delete**|**Truncate**|
+|Purpose|Removes specific rows|Removes all rows from a table|
 Command Type,DML (Data Manipulation Language),DDL (Data Definition Language)
 Performance,Slower (logs each row deletion),Faster (does not log each row deletion)
 Rollback Capability,Can be rolled back,Cannot be rolled back
