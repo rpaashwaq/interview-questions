@@ -93,10 +93,12 @@ Features:
 What is method reference in Java 8 ?
 ```
 Method Reference is a shorthand notation of a lambda expression to call a method.
-e.g.,
+
+```java
 List<Integer> numList = Arrays.asList(23,4,6,8,9,1,2,10);
 numList.stream().filter(i -> i>5).sorted().forEach(t -> System.out::println(t));
 output: 6,8,9,10,23
+```
 
 ```markdown
 Spell few stream method you used in your project ?
