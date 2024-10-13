@@ -1,6 +1,8 @@
 ```markdown
 How do you decide Thread pool size ?
 ```
+1. CPU Intensive Tasks
+2. I/O Intesive Tasks
 
 ## Determining Thread Pool Size: A Balancing Act
 
