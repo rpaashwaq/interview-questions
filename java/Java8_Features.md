@@ -103,7 +103,9 @@ Spell few stream method you used in your project ?
 ```
 filter, forEach, sorted, map, flatMap, reduce, groupingBy, count, collect
 
-e.g.,
+```markdown
+when to use map & flatMap ?
+```
 ```java
 
 public class User { private String name; private String phone; private List<String> email; }
@@ -125,7 +127,22 @@ List<String> emails = users.stream()
 ```
                      
 ```markdown
-when to use map & flatMap ?
+Count characters in a String ?
+```
+```java
+String input ="Basanta";
+
+Map<String,Long> countMap = Arrays.stream( input.split("") )
+                             .collect(
+                                       groupingBy(
+                                          Function.identity(), counting()
+                                        )
+                              );
+```
+output: {a=3, B=1, s=1, t=1, n=1}
+
+```markdown
+Stream vs Parallel Stream ?
 ```
 
 
