@@ -37,10 +37,14 @@ stateCityMap.put("New York", Arrays.asList("New York City", "Buffalo", "Rocheste
 
 Using flatMap:
 ```java
-List<String> cities = stateCityMap.values()
-                                  .stream()
-                                  .flatMap(List::stream)
-                                  .collect(Collectors.toList());
+List<String> cities = 
+stateCityMap.values()
+                                  
+.stream()
+                                  
+.flatMap(List::stream)
+                                  
+.collect(Collectors.toList());
 ```
 
 Explanation:
