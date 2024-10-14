@@ -37,7 +37,62 @@ Expected Time Complexity: O(n*n)
 Expected Space Complexity: O(n)
 
 Constraints:
-1 <= arr.length <= 103
-1 <=arr[i]<= 105
-1 <=target<= 105
+1 <= arr.length <= 10^3
+
+1 <=arr[i]<= 10^5
+
+1 <=target<= 10^5
+
+Code in Java 8 Lambdas:
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class QuadrupletCounter {
+    public static int countQuadruplets(int[] arr, int target) {
+        int n = arr.length;
+        Map<Integer, Integer> pairSums = new HashMap<>();
+        int count = 0;
+
+        // Create a map to store pair sums and their frequencies
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int pairSum = arr[i] + arr[j];
+                pairSums.putIfAbsent(pairSum, 0);
+                pairSums.put(pairSum, pairSums.get(pairSum) + 1);
+            }
+        }
+
+        // Iterate through the array again to find quadruplets
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int remainingSum = target - arr[i] - arr[j];
+                if (pairSums.containsKey(remainingSum)) {
+                    count += pairSums.get(remainingSum);
+                    // If the pair sum is the same as the remaining sum, subtract 1 to avoid counting the same quadruplet twice
+                    if (remainingSum == arr[i] + arr[j]) {
+                        count -= 1;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 1, 2, 10};
+        int target = 20;
+        int result = countQuadruplets(arr, target);
+        System.out.println(result);  // Output: 1
+    }
+}
+
+
+
+
+
+
+
+
 
