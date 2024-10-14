@@ -151,8 +151,7 @@ Strings in Java are immutable, meaning their values cannot be changed after crea
 
 ---
 Sum of Array Program:
-
-Java
+```java
 public class ArraySum {
     public static int calculateSum(int[] arr) {
         int sum = 0;
@@ -169,15 +168,14 @@ public class ArraySum {
         System.out.println("The sum of the array elements is: " + total);
     }
 }
-
+```
 Explanation:
 
 The calculateSum method takes an integer array as input and calculates the sum of its elements using a for-each loop.
 The main method creates an integer array, calls the calculateSum method with the array as an argument, and prints the result.
 Typecasting Program:
 
-
-Java
+```java
 public class TypeCasting {
     public static void main(String[] args) {
         // Implicit type casting (widening)
@@ -191,7 +189,7 @@ public class TypeCasting {
         System.out.println("Explicit type casting: " + intValue2);
     }
 }
-
+```
 Explanation:
 
 Implicit type casting automatically converts a value from a smaller data type to a larger one (e.g., int to double).
