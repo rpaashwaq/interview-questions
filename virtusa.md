@@ -64,3 +64,21 @@ Lightweight processes within a process that can be multithreaded.
 Paging vs Segmentation: 
 Differences in memory management strategies.
 
+---
+Explain Marker Interface. 
+
+Explain OOPS concept alone with real time example. 
+
+
+Explain about Constructor Chaining. 
+
+Explain about static keyword. 
+
+
+Why Strings are immutable. 
+
+
+
+
+
+
