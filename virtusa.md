@@ -240,5 +240,57 @@ Explanation:
 Implicit type casting automatically converts a value from a smaller data type to a larger one (e.g., int to double).
 Explicit type casting requires a manual cast using parentheses to convert a value from a larger data type to a smaller one (e.g., double to int). Be aware that this can result in loss of precision or data.
 
+---
+Find longest common subsequence with memory optimization of 0(1)
+---
+finds the longest common subsequence (LCS) 
+between two strings with O(1) memory optimization:
+
+```java
+public class LongestCommonSubsequence {
+    public static int findLCS(String str1, String str2) {
+        int m = str1.length();
+        int n = str2.length();
+
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+
+        int result = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (str1.charAt(i) == str2.charAt(j)) {
+                    result = Math.max(result, findLCS(str1.substring(0, i), str2.substring(0, j)) + 1);
+                }
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String str1 = "AGGTAB";
+        String str2 = "GXTXAYB";
+
+        int lcsLength = findLCS(str1, str2);
+        System.out.println("Length of the longest common subsequence: " + lcsLength);
+    }
+}
+```
+
+**Explanation:**
+
+1. **Recursive Approach:** The `findLCS` method uses a recursive approach to find the LCS. It compares characters from both strings and recursively calls itself with substrings if a match is found.
+2. **Memory Optimization:** The key to O(1) memory optimization lies in the recursive calls. Instead of storing the intermediate results in a 2D table, we directly calculate the result based on the recursive calls. This avoids the need for extra space.
+3. **Base Case:** If either string is empty, the LCS length is 0.
+4. **Recursive Calculation:** If the current characters in both strings match, we recursively calculate the LCS length of the substrings excluding the current characters and add 1 to include the matched character.
+5. **Maximum Length:** We keep track of the maximum LCS length encountered during the recursive calls and return it as the final result.
+
+**Key Points:**
+
+- This implementation achieves O(1) memory optimization by avoiding the use of a 2D table.
+- It's important to note that this recursive approach can be less efficient than iterative solutions for large input strings due to the overhead of function calls.
+- For very large inputs, iterative approaches with dynamic programming might be more suitable.
+
+I hope this explanation is helpful!
 
 
