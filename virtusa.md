@@ -374,6 +374,57 @@ LCS Length: 3
 This indicates that the longest common subsequence (LCS) between the two input strings, "AGGTAB" and "GXTXAYB", is of length 3.
 
 ---
+how to find second highest Element in a array
+---
+To find the second-highest element in an array in Java 8, you can use the following approach:
+
+Code:
+
+import java.util.Arrays;
+import java.util.OptionalInt;
+
+public class SecondHighest {
+    public static void main(String[] args) {
+        int[] arr = {12, 35, 1, 10, 34, 1};
+
+        OptionalInt secondHighest = findSecondHighest(arr);
+
+        if (secondHighest.isPresent()) {
+            System.out.println("The second highest element is: " + secondHighest.getAsInt());
+        } else {
+            System.out.println("No second highest element found.");
+        }
+    }
+
+    public static OptionalInt findSecondHighest(int[] arr) {
+        // Remove duplicates by using Arrays.stream and distinct()
+        int[] distinctArr = Arrays.stream(arr).distinct().toArray();
+
+        // If there are fewer than 2 unique elements, return an empty OptionalInt
+        if (distinctArr.length < 2) {
+            return OptionalInt.empty();
+        }
+
+        // Sort the array in descending order
+        Arrays.sort(distinctArr);
+
+        // Return the second-to-last element
+        return OptionalInt.of(distinctArr[distinctArr.length - 2]);
+    }
+}
+
+Explanation:
+
+	1.	Remove Duplicates: We use Arrays.stream(arr).distinct() to remove duplicates from the array.
+	2.	Check for Size: If the array has fewer than two distinct elements, we return an empty OptionalInt to indicate there is no second highest.
+	3.	Sort the Array: After removing duplicates, the array is sorted in ascending order.
+	4.	Return the Second Highest: The second highest value is the second-to-last element in the sorted array.
+
+Output:
+
+The second highest element is: 34
+
+This approach uses Java 8’s functional programming features (streams, optional) to handle the logic in a clean and concise manner. Let me know if you need any further customization!
 
 
 
