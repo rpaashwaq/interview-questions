@@ -36,6 +36,7 @@ Pointers that have no associated data type and can hold any type.
 
 Copy Constructors: 
 Functions that initialize an object using another object of the same class.
+
 Access Specifiers: 
 Keywords used to control the accessibility of classes, methods, and fields.
 
@@ -50,6 +51,7 @@ A set of properties that guarantee database transactions are processed reliably.
 
 Data Warehousing: 
 The storage of large amounts of data for statistical analysis.
+
 Types of Keys in Relational Model: 
 Including Candidate, Super, Primary, Alternate, and Foreign keys.
 
