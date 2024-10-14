@@ -14,14 +14,14 @@ Data Warehousing,
 Types of Keys in Relational Model, 
 Views in SQL, Threads in OS, 
 Paging vs Segmentation.
-
+---
 Virtusa's interview process for Full Stack Java Developers includes a mix of 
 coding questions, 
 core concepts, and 
 practical problems. 
 Here are some of the key topics and questions 
 that candidates might encounter:
-
+---
 Encapsulation: 
 The bundling of data and methods within a class in Java.
 
