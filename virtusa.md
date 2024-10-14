@@ -379,7 +379,7 @@ how to find second highest Element in a array
 To find the second-highest element in an array in Java 8, you can use the following approach:
 
 Code:
-
+```java
 import java.util.Arrays;
 import java.util.OptionalInt;
 
@@ -412,7 +412,7 @@ public class SecondHighest {
         return OptionalInt.of(distinctArr[distinctArr.length - 2]);
     }
 }
-
+```
 Explanation:
 
 	1.	Remove Duplicates: We use Arrays.stream(arr).distinct() to remove duplicates from the array.
