@@ -150,7 +150,8 @@ Strings in Java are immutable, meaning their values cannot be changed after crea
 **To create a new string with a different value, you must create a new string object.**
 
 ---
-Sum of Array Program:
+***Sum of Array Program:***
+
 ```java
 public class ArraySum {
     public static int calculateSum(int[] arr) {
@@ -173,7 +174,51 @@ Explanation:
 
 The calculateSum method takes an integer array as input and calculates the sum of its elements using a for-each loop.
 The main method creates an integer array, calls the calculateSum method with the array as an argument, and prints the result.
-Typecasting Program:
+
+Code in Java 8:
+
+I'd be glad to provide a response that addresses the prompt and incorporates the best aspects of previous responses:
+
+**Java 8 Lambdas with Streams:**
+
+```java
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class ArraySum {
+    public static int calculateSum(int[] arr) {
+        return IntStream.of(arr).sum();
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        int total = calculateSum(numbers);
+        System.out.println("The sum of the array elements is: " + total);
+    }
+}
+```
+
+**Explanation:**
+
+1. **`IntStream.of(arr)`:** Creates an `IntStream` from the given integer array `arr`.
+2. **`.sum()`:** Calculates the sum of all elements in the `IntStream` and returns the result.
+
+**Key Points:**
+
+- The lambda expression is implicitly used within the `IntStream.of()` method to process each element of the array.
+- The `sum()` method is a built-in terminal operation that efficiently calculates the sum.
+- This approach is generally more concise and expressive than the traditional loop-based implementation.
+
+**Additional Considerations:**
+
+- For more complex operations on arrays, you can use other stream operations like `map`, `filter`, `reduce`, etc.
+- Consider using parallel streams (`IntStream.of(arr).parallel().sum()`) for performance gains on large datasets.
+- Choose the approach that best suits your specific use case and coding style.
+
+By leveraging Java 8 lambdas and streams, you can write more functional and concise code for array operations.
+
+
+***Typecasting Program:***
 
 ```java
 public class TypeCasting {
