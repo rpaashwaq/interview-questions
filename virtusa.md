@@ -149,7 +149,53 @@ Strings in Java are immutable, meaning their values cannot be changed after crea
 
 **To create a new string with a different value, you must create a new string object.**
 
+---
+Sum of Array Program:
 
+Java
+public class ArraySum {
+    public static int calculateSum(int[] arr) {
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers   
+ = {10, 20, 30, 40, 50};
+        int total = calculateSum(numbers);
+        System.out.println("The sum of the array elements is: " + total);
+    }
+}
+
+Explanation:
+
+The calculateSum method takes an integer array as input and calculates the sum of its elements using a for-each loop.
+The main method creates an integer array, calls the calculateSum method with the array as an argument, and prints the result.
+Typecasting Program:
+
+
+Java
+public class TypeCasting {
+    public static void main(String[] args) {
+        // Implicit type casting (widening)
+        int intValue = 10;
+        double doubleValue = intValue; // Integer to double
+        System.out.println("Implicit type casting: " + doubleValue);
+
+        // Explicit type casting (narrowing)
+        double pi = 3.14159;
+        int intValue2 = (int) pi; // Double to integer
+        System.out.println("Explicit type casting: " + intValue2);
+    }
+}
+
+Explanation:
+
+Implicit type casting automatically converts a value from a smaller data type to a larger one (e.g., int to double).
+Explicit type casting requires a manual cast using parentheses to convert a value from a larger data type to a smaller one (e.g., double to int). Be aware that this can result in loss of precision or data.
 
 
 
